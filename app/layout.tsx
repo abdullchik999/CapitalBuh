@@ -13,6 +13,15 @@ export const metadata: Metadata = {
   keywords: 'бухгалтерские услуги, бухгалтер ИП, бухгалтер ТОО, сдача отчетности, форма 910, СНТ, НДС, регистрация ИП',
   authors: [{ name: 'CapitalBuh.kz' }],
   robots: 'index, follow',
+  icons: {
+    icon: [
+      { url: '/favicon.ico' },
+      { url: '/favicon-96x96.png', sizes: '96x96', type: 'image/png' },
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+    ],
+    apple: '/apple-touch-icon.png',
+  },
+  manifest: '/site.webmanifest',
   alternates: {
     canonical: 'https://capitalbuh.kz/',
   },
