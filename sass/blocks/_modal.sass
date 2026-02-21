@@ -1,0 +1,62 @@
+.modal
+    display: none
+    position: fixed
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    padding: 20px
+    background-color: white
+    border-radius: 10px
+    z-index: 5000
+    width: 90%
+    max-width: 400px
+    &.active
+        display: block
+
+.modal-block
+    display: flex
+    flex-direction: column
+
+.modal-top
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 20px
+
+.modal-brand
+    font-size: 24px
+    font-weight: 500
+
+.modal-close
+    font-size: 28px
+    font-weight: bold
+    color: #aaa
+    background: none
+    border: none
+    cursor: pointer
+    &:hover
+        color: black
+
+.modal-whatsapp, .modal-phone
+    padding: 15px
+    border-radius: 8px
+    border: none
+    margin-bottom: 10px
+    font-size: 16px
+    transition: transform 0.2s ease, box-shadow 0.3s ease
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08)
+    &:hover
+        cursor: pointer
+        filter: brightness(90%)
+        transform: scale(1.03)
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.17), 0 4px 6px rgba(0, 0, 0, 0.1)
+    &:active
+        transform: scale(0.98)
+    a
+        text-decoration: none
+        color: white
+
+.modal-whatsapp
+    background-color: #25D366
+.modal-phone
+    background-color: #4285F4

@@ -1,0 +1,70 @@
+.advantages
+    padding: clamp(40px, calc(40px + (80 - 40) * ((100vw - 320px) / 1600)), 80px)
+    text-align: center
+    background-color: #f5f7f9
+    background-size: cover
+    background-position: center
+    &__title
+        font-size: clamp(28px, calc(28px + (48 - 28) * ((100vw - 320px) / 1600)), 48px)
+        color: $title-color
+        margin-top: 0
+        margin-bottom: clamp(40px, calc(40px + (80 - 40) * ((100vw - 320px) / 1600)), 80px)
+    &-grid
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        gap: 20px
+        margin-bottom: clamp(20px, calc(20px + (40 - 20) * ((100vw - 320px) / 1600)), 40px)
+        @media (max-width: 992px)
+            grid-template-columns: repeat(2, 1fr)
+        @media (max-width: 767px)
+            grid-template-columns: 1fr
+    &-card
+        background-color: #fff
+        border-radius: 10px
+        padding: 30px 20px
+        text-align: center
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08)
+        transition: transform 0.3s ease, box-shadow 0.3s ease
+        &:hover
+            transform: scale(1.03)
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15), 0 6px 6px rgba(0, 0, 0, 0.1)
+        &__icon
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 70px
+            height: 70px
+            background-color: #DBEAFE
+            border-radius: 50%
+            margin: 0 auto 20px auto
+                
+            img
+                width: 40px
+                height: 40px
+        &__title
+            font-size: clamp(18px, calc(18px + (24 - 18) * ((100vw - 320px) / 1600)), 24px)
+            color: $btn-color
+            margin-top: 0
+            margin-bottom: 10px
+        &__description
+            font-size: clamp(14px, calc(14px + (16 - 14) * ((100vw - 320px) / 1600)), 16px)
+            line-height: 1.5
+            color: $primary-color
+    &__button
+        margin-top: clamp(20px, calc(20px + (40 - 20) * ((100vw - 320px) / 1600)), 40px)
+        font-size: 18px
+        padding: clamp(15px, calc(15px + (20 - 15) * ((100vw - 320px) / 1600)), 20px) clamp(25px, calc(25px + (35 - 25) * ((100vw - 320px) / 1600)), 35px)
+
+.advantages-grid
+    .advantages-card:nth-child(1) .advantages-card__icon
+        background-color: #eaf0ff
+    .advantages-card:nth-child(2) .advantages-card__icon
+        background-color: #ccf9d7
+    .advantages-card:nth-child(3) .advantages-card__icon
+        background-color: #d7d5fd
+    .advantages-card:nth-child(4) .advantages-card__icon
+        background-color: #faf2c0
+    .advantages-card:nth-child(5) .advantages-card__icon
+        background-color: #dbfff7
+    .advantages-card:nth-child(6) .advantages-card__icon
+        background-color: #e6d9ff

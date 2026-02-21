@@ -1,0 +1,61 @@
+.services
+    padding: clamp(40px, calc(40px + (80 - 40) * ((100vw - 320px) / 1600)), 80px)
+    text-align: center
+    background-image: linear-gradient(rgba(241, 246, 251, 0.95), rgba(241, 246, 251, 0.95)), url('/img/bgi.jpg')
+    background-size: cover
+    background-position: center
+    z-index: 100
+    &__title
+        font-size: clamp(28px, calc(28px + (48 - 28) * ((100vw - 320px) / 1600)), 48px)
+        color: $title-color
+        margin-top: 0
+        margin-bottom: clamp(20px, calc(20px + (40 - 20) * ((100vw - 320px) / 1600)), 40px)
+    &-block
+        display: flex
+        justify-content: space-between
+        padding-bottom: clamp(40px, calc(40px + (80 - 40) * ((100vw - 320px) / 1600)), 80px) // Moved here
+        @media (max-width: 992px)
+            justify-content: center
+            flex-wrap: wrap
+    &-card
+        background-color: #fff
+        border-radius: 10px
+        padding: clamp(20px, calc(20px + (30 - 20) * ((100vw - 320px) / 1600)), 30px)
+        text-align: left
+        flex-basis: 27%
+        margin-bottom: 20px
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08)
+        transition: transform 0.3s ease, box-shadow 0.3s ease
+        &:nth-child(1)
+            border-left: 5px solid #3780ce
+        &:nth-child(2)
+            border-left: 5px solid #43e146
+        &:nth-child(3)
+            border-left: 5px solid #df41da
+        &:hover
+            transform: scale(1.03)
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 6px 6px rgba(0, 0, 0, 0.1)
+        @media (max-width: 992px)
+            flex-basis: 48%
+        @media (max-width: 767px)
+            flex-basis: 100%
+        &__title
+            font-size: clamp(18px, calc(18px + (24 - 18) * ((100vw - 320px) / 1600)), 24px)
+            color: $btn-color
+            margin-top: 0
+            margin-bottom: 20px
+        &__list
+            padding-left: 20px
+            list-style: none
+        &__item
+            font-size: clamp(14px, calc(14px + (16 - 14) * ((100vw - 320px) / 1600)), 16px)
+            line-height: 1.6
+            position: relative
+            &:not(:last-child)
+                margin-bottom: 10px
+            &::before
+                content: '✔'
+                color: #49ff46
+                position: absolute
+                left: -20px
+                top: 0

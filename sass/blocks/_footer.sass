@@ -1,0 +1,35 @@
+.footer
+    background-color: #1a1a2e // Dark background from image
+    color: #ffffff // White text color
+    padding: 20px 0
+    font-size: 14px
+    .footer-content
+        display: flex
+        justify-content: space-between
+        align-items: center
+        @media (max-width: 767px)
+            flex-direction: column
+            text-align: center
+            gap: 15px
+    &-contact
+        display: flex
+        gap: 20px
+        @media (max-width: 576px)
+            flex-direction: column
+            gap: 10px
+        &__item
+            color: #ffffff
+            text-decoration: none
+            display: flex
+            align-items: center
+            &:hover
+                color: $btn-color // Use a highlight color from existing styles
+                &::after
+                    width: 0 // Remove underline effect from base <a> style
+        &__icon
+            margin-right: 8px
+            font-size: 18px // Adjust icon size
+    &-copyright
+        font-size: 14px
+        @media (max-width: 767px)
+            margin-top: 10px

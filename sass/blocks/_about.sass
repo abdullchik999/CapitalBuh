@@ -1,0 +1,18 @@
+.about
+    padding: clamp(40px, calc(40px + (80 - 40) * ((100vw - 320px) / 1600)), 80px)
+    text-align: center
+    &__title
+        font-size: clamp(28px, calc(28px + (48 - 28) * ((100vw - 320px) / 1600)), 48px)
+        color: $title-color
+        margin-top: 0
+        margin-bottom: clamp(40px, calc(40px + (80 - 40) * ((100vw - 320px) / 1600)), 80px)
+    &__description
+        font-size: clamp(16px, calc(16px + (20 - 16) * ((100vw - 320px) / 1600)), 20px)
+        line-height: 1.6
+        max-width: 900px
+        margin: 0 auto
+        &:not(:last-child)
+            margin-bottom: 20px
+    &__brand
+        color: $brand-color
+        font-weight: bold
